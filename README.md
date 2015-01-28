@@ -6,3 +6,9 @@ This repo holds all the script, config files and commands you might want to use 
 * Drupal 7/8
 * Wordpress 4+
 * Joomla 3+
+
+### Usage
+
+```
+curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+```
