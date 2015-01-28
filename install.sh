@@ -35,16 +35,10 @@ sudo sed -i 's/group = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 mysql-ctl install
 
 # Set up NGINX
-# Listen port 80,
-
-# Setup indexes
-
-# Configure PHP sock
-
-# Set up the try_url thing
-
-# Location...
-ls -l /etc/nginx/sites-available/
+# Listen port 80, change document root, setup indexes, configure PHP sock
+# set up the try_url thing (Drupal is not Worpress)...
+# Thankfully, I already modified this in the repo!
+sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/default --output-document=/etc/nginx/sites-available/default
 
 # Start the party!
 sudo service nginx start
