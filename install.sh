@@ -1,5 +1,5 @@
-#!/bin/bash -e
-set -e
+#!/bin/bash
+#set -e
 
 # Redirect stdout ( > ) into a named pipe ( >() ) running "tee"
 exec > >(tee /tmp/installlog.txt)
@@ -13,23 +13,17 @@ exec 2>&1
 #
 
 # Apache2
-sudo service apache2 status
 sudo service apache2 stop
-sudo service apache2 status
 
 # NGINX
-sudo service nginx status
 sudo service nignx stop
-sudo service nginx status
 
 # MySQL
-mysql-ctl status
 mysql-ctl stop
-mysql-ctl status
 
 # Set Up PHP
 sudo sed -i 's/user = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
-sudo sed -i 's/group = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
+sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 
 # Set up MySQL
 mysql-ctl install
