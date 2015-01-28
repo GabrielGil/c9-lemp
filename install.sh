@@ -16,7 +16,7 @@ exec 2>&1
 sudo service apache2 stop
 
 # NGINX
-sudo service nignx stop
+sudo service nginx stop
 
 # MySQL
 mysql-ctl stop
@@ -37,7 +37,7 @@ sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/default --
 # Start the party!
 sudo service nginx start
 sudo service php5-fpm start
-mysql-ctl restart
+mysql-ctl start
 
 # Are we ready?
 sudo service nginx status
