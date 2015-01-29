@@ -12,3 +12,13 @@ This repo holds all the script, config files and commands you might want to use 
 ```
 curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
 ```
+OR
+```
+wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+```
+
+### Considerations
+
+This simple script might have some undesired side effects.
+
+Can create a wildcard domain for *c9.io so we dont override the default virtual site.
