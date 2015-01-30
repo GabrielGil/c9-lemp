@@ -39,12 +39,15 @@ mysql-ctl install
 
 
 # Start the party!
+mysql-ctl start
 sudo service nginx start
 sudo service php5-fpm start
-mysql-ctl start
 
 
 
 # Are we ready?
+echo Check all services are up.
+sleep 5 # Wait for MySQL server to be fully loaded.
 sudo service nginx status
 sudo service php5-fpm status
+mysql-ctl status
