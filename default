@@ -14,7 +14,7 @@
 server {
         listen 8080; #C9 limits public ports. Only 8080 available
 
-        server_name linguago.com;
+        server_name _;
 
         # Home directoy, our server workspace
         root /home/forge/linguago.com;
