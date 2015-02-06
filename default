@@ -33,8 +33,9 @@ server {
             # Default: Parameters at the end for rewriting.
             try_files $uri $uri/ /index.php?$query_string;
 
-            # Query modified for Drupal (Note "q" parameter)
-            try_files $uri $uri/ /index.php?$query_string;
+            # Query modified for Drupal, althought should work without
+            # this try_files (Note "q" parameter)
+            # try_files $uri $uri/ /index.php?q=$uri&$args;
         }
 
         location = /favicon.ico { access_log off; log_not_found off; }
