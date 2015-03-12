@@ -17,7 +17,7 @@ server {
         server_name _;
 
         # Home directoy, our server workspace
-        root /home/forge/linguago.com;
+        root /home/ubuntu/workspace;
 
         # Look for index files in this order
         index index.html index.htm index.php;
