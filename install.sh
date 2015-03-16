@@ -30,7 +30,7 @@ mysql-ctl stop
 sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/default --output-document=/etc/nginx/sites-available/default
 
 # PHP:
-sudo sed -i 's/user = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
+sudo sed -i 's/owner = www-data/owner = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 
 # MySQL:
