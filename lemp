@@ -19,25 +19,34 @@ case "$1" in
         sleep 1
     ;;
     stop)
-        stop
+        echo "Stoppting Nginx..."
+        sudo service nginx stop
+        sleep 1
+        echo "Stopping PHP5..."
+        sudo service php5-fpm stop
+        sleep 1
+        echo "Stopping c9 MySQL..."
+        mysql-ctl stop
+        sleep 1
     ;;
     restart)
-        stop
-        start
-    ;;
-    cli)
-        cli
+        echo "Restarting Nginx..."
+        sudo service nginx restart
+        sleep 1
+        echo "Restarting PHP5..."
+        sudo service php5-fpm restart
+        sleep 1
+        echo "Restarting c9 MySQL..."
+        mysql-ctl restart
+        sleep 1
     ;;
     status)
-        if isrunning
-        then
-            echo "running" 1>&2
-        else
-            echo "stopped" 1>&2
-        fi
+        sudo service nginx status
+        sudo service php5-fpm status
+        mysql-ctl status
         exit 0
     ;;
     *)
-        echo "Usage: `basename $0` [start|restart|stop|status|cli|install]"
+        echo "Usage: `basename $0` [start|restart|stop|status|install]"
     ;;
 esac
