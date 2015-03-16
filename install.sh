@@ -37,6 +37,10 @@ sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 mysql-ctl install
 
 
+# Install helper
+sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/lemp --output-document=/usr/bin/lemp
+sudo chmod 755 /usr/bin/lemp
+
 
 # Start the party!
 mysql-ctl start
