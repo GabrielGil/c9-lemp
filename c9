@@ -14,7 +14,7 @@
 server {
         listen 8080; #C9 limits public ports. Only 8080 available
 
-        server_name _;
+        server_name *.c9.io;
 
         # Home directoy, our server workspace
         root /home/ubuntu/workspace;

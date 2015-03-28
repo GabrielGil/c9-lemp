@@ -27,7 +27,10 @@ mysql-ctl stop
 # Listen port 80, change document root, setup indexes, configure PHP sock
 # set up the try_url thing (Drupal is not Worpress)...
 # Thankfully, I already modified this in the repo!
-sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/default --output-document=/etc/nginx/sites-available/default
+sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
+sudo chmod 755 /etc/nginx/sites-available/c9
+sudo ln -s /etc/nginx/sites-available/c9 /etc/nginx/sites-enabled/c9
+
 
 # PHP:
 sudo sed -i 's/user = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
@@ -46,6 +49,7 @@ sudo chmod 755 /usr/bin/lemp
 # Start the party!
 mysql-ctl start
 sudo service nginx start
+sudo service nginx reload
 sudo service php5-fpm start
 
 
