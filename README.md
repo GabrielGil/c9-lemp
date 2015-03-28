@@ -17,11 +17,11 @@ server (MySQL).
 
 Run any of this commands straightaway on your c9 terminal.
 
-```
+``` bash
 curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
 ```
 ----
-```
+``` bash
 wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
 ```
 
