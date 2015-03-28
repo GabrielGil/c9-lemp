@@ -25,8 +25,13 @@ curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh |
 wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
 ```
 
+After completing this process your environment will be also provisioned with a
+simple command to start, stop and restart the whole stack in a brief:
 
-### Update
+* `lemp start` // Starts NGINX, PHP and MySQL (The c9 way)
+* `lemp stop`
+
+### Updating
 
 You can re-run this script as many times as you wish, just in case I've updated
 something.
