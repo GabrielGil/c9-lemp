@@ -42,7 +42,7 @@ server {
         location = /robots.txt  { access_log off; log_not_found off; }
 
         access_log off;
-        error_log  /home/ubuntu/error.log error;
+        error_log  /home/ubuntu/error.log notice;
 
         error_page 404 /index.php;
 
