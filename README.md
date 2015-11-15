@@ -42,5 +42,5 @@ something.
 This is a quite simple script. It is just an easy way to configure your environment
 to be up and running with NGINX and PHP-FPM.
 
-It does not overrides the default NGINX site configuration file, so dont have to
-worry about overrides if you hace already modified yours.
+It does not override the default NGINX site configuration file, so you don't have to
+worry about overrides if you have already modified yours.
