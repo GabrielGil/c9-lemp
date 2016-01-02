@@ -25,7 +25,7 @@ sudo apt-get install php7.0 php7.0-fpm
 # Listen port 80, change document root, setup indexes, configure PHP sock
 # set up the try_url thing (Drupal is not Worpress)...
 # Thankfully, I already modified this in the repo!
-sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
+sudo wget https://raw.githubusercontent.com/sebascontre/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
 sudo chmod 755 /etc/nginx/sites-available/c9
 sudo ln -s /etc/nginx/sites-available/c9 /etc/nginx/sites-enabled/c9
 
@@ -36,9 +36,8 @@ sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
 sudo sed -i 's/pm = dynamic/pm = ondemand/g' /etc/php5/fpm/pool.d/www.conf # Reduce number of processes..
 
 # Install helper
-sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/lemp --output-document=/usr/bin/lemp
+sudo wget https://raw.githubusercontent.com/sebascontre/c9-lemp/master/lemp --output-document=/usr/bin/lemp
 sudo chmod 755 /usr/bin/lemp
-
 
 # Start the party!
 sudo service nginx start
