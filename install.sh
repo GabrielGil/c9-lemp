@@ -14,6 +14,10 @@ sudo service nginx stop
 # MySQL
 mysql-ctl stop
 
+# Update Heroku and Login
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+heroku login
+
 # Instaling PHP7.0
 sudo add-apt-repository ppa:ondrej/php-7.0
 sudo apt-get update
