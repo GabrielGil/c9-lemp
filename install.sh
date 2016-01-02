@@ -5,6 +5,18 @@ exec > >(tee /tmp/installlog.txt)
 # Without this, only stdout would be captured
 exec 2>&1
 
+# Update Composer
+sudo /usr/bin/composer self-update
+
+# Add PHP7.0 Repository
+sudo add-apt-repository ppa:ondrej/php-7.0
+
+# Update Heroku Toolbelt
+wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Install PHP7.0
+sudo apt-get install php7.0 php7.0-fpm
+
 # Stop all the services
 
 # Apache2
@@ -14,14 +26,6 @@ sudo service nginx stop
 # MySQL
 mysql-ctl stop
 
-# Update Heroku and Login
-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-heroku login
-
-# Instaling PHP7.0
-sudo add-apt-repository ppa:ondrej/php-7.0
-sudo apt-get update
-sudo apt-get install php7.0 php7.0-fpm
 
 # Set them up!
 
