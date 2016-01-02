@@ -15,7 +15,8 @@ sudo add-apt-repository ppa:ondrej/php-7.0
 wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 # Install PHP7.0
-sudo apt-get install php7.0 php7.0-fpm
+sudo apt-get install php7.0 php7.0-fpm -y
+sudo apt-get purge apache2 mysql-server mysql-client -y
 
 # Stop all the services
 
