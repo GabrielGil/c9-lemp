@@ -51,10 +51,10 @@ sudo chmod 755 /usr/bin/lemp
 # Start the party!
 sudo service nginx start
 sudo service nginx reload
-sudo service php7.0-fpm start
+sudo service php-fpm7.0 start
 
 # Are we ready?
 echo Check all services are up.
 sleep 5
 sudo service nginx status
-sudo service php5-fpm status
+sudo service php-fpm7.0 status
