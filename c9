@@ -14,10 +14,10 @@
 server {
         listen 8080; #C9 limits public ports. Only 8080 available
 
-        server_name *.c9.io;
+        server_name *.c9users.io;
 
         # Home directoy, our server workspace
-        root /home/ubuntu/workspace;
+        root ~/workspace/wordpress;
 
         # Look for index files in this order
         index index.html index.htm index.php;
@@ -50,7 +50,7 @@ server {
         location ~ \.php$ {
             fastcgi_split_path_info ^(.+\.php)(/.+)$;
             # We love socks, no callbacks.
-            fastcgi_pass unix:/var/run/php5-fpm.sock;
+            fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
             fastcgi_index index.php;
             include fastcgi_params;
         }

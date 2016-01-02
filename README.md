@@ -5,24 +5,16 @@ use to set up a LEMP environment using NGINX and PHP-FPM instead the defaul
 Apache2 runner for PHP applications on Cloud9 workspaces and the same databse
 server (MySQL).
 
-
-### Works great with,
-
-* Drupal 7/8
-* Wordpress 4+
-* Joomla 3+
-
-
 ### Usage
 
 Run any of this commands straightaway on your c9 terminal.
 
 ``` bash
-curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+curl -L https://raw.githubusercontent.com/sebascontre/c9-lemp/master/install.sh | bash
 ```
 ----
 ``` bash
-wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+wget -O - https://raw.githubusercontent.com/sebascontre/c9-lemp/master/install.sh | bash
 ```
 
 After completing this process your environment will be also provisioned with a
