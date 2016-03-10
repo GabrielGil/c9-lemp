@@ -59,7 +59,7 @@ cd phpredis
 git checkout php7
 phpize
 ./configure
-make && make install
+make && sudo make install
 cd ..
 rm -rf phpredis
 sudo sh -c 'echo "extension=redis.so" > /etc/php/7.0/mods-available/redis.ini'
