@@ -7,7 +7,7 @@ exec 2>&1
 
 # Check if sources.list is a symlink and make a copy so `apt-get update` succeeds
 if [ -f /etc/apt/sources.list ] && [ -L /etc/apt/sources.list ]; then
-  sudo mv /etc/apt/sources.list sudo mv /etc/apt/sources.list.old
+  sudo mv /etc/apt/sources.list /etc/apt/sources.list.old
   sudo cp /etc/apt/sources.list.old /etc/apt/sources.list
 fi
 
