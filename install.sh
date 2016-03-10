@@ -5,6 +5,12 @@ exec > >(tee /tmp/installlog.txt)
 # Without this, only stdout would be captured
 exec 2>&1
 
+# Check if sources.list is a symlink and make a copy so `apt-get update` succeeds
+if [ -f /etc/apt/sources.list ] && [ -L /etc/apt/sources.list ]; then
+  sudo mv /etc/apt/sources.list sudo mv /etc/apt/sources.list.old
+  sudo cp /etc/apt/sources.list.old /etc/apt/sources.list
+fi
+
 # Update Composer
 sudo /usr/bin/composer self-update
 
@@ -38,9 +44,9 @@ sudo ln -s /etc/nginx/sites-available/c9 /etc/nginx/sites-enabled/c9
 
 
 # PHP:
-sudo sed -i 's/user = www-data/user = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
-sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php5/fpm/pool.d/www.conf
-sudo sed -i 's/pm = dynamic/pm = ondemand/g' /etc/php5/fpm/pool.d/www.conf # Reduce number of processes..
+sudo sed -i 's/user = www-data/user = ubuntu/g' /etc/php/7.0/fpm/pool.d/www.conf
+sudo sed -i 's/group = www-data/group = ubuntu/g' /etc/php/7.0/fpm/pool.d/www.conf
+sudo sed -i 's/pm = dynamic/pm = ondemand/g' /etc/php/7.0/fpm/pool.d/www.conf # Reduce number of processes..
 
 # Install helper
 sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/lemp --output-document=/usr/bin/lemp

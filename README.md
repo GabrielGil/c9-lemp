@@ -4,6 +4,10 @@ This repo holds all the script, config files and commands you might want to
 use to set up a LEMP environment using NGINX and PHP-FPM instead the defaul
 Apache2 runner for PHP applications on Cloud9 workspaces.
 
+### Prerequisite
+
+Setup a c9 image using the Apache + PHP Template
+
 ### Usage
 
 Run any of this commands straightaway on your c9 terminal.
