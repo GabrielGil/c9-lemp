@@ -6,7 +6,7 @@ Apache2 runner for PHP applications on Cloud9 workspaces.
 
 ### Prerequisite
 
-Setup a c9 image using the Apache + PHP Template
+Setup a c9 workspace using the Apache, PHP5 and MySQL template
 
 ### Usage
 
