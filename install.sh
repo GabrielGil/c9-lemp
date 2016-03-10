@@ -80,3 +80,4 @@ echo Check all services are up.
 sleep 5
 sudo service nginx status
 sudo service php7.0-fpm status
+lemp restart
