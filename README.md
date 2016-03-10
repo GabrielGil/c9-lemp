@@ -13,11 +13,11 @@ Setup a c9 workspace using the Apache, PHP5 and MySQL template
 Run any of this commands straightaway on your c9 terminal.
 
 ``` bash
-curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+curl -L https://raw.githubusercontent.com/connerbw/c9-lemp/master/install.sh | bash
 ```
 ----
 ``` bash
-wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
+wget -O - https://raw.githubusercontent.com/connerbw/c9-lemp/master/install.sh | bash
 ```
 
 After completing this process your environment will be also provisioned with a
