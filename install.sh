@@ -15,7 +15,7 @@ fi
 sudo /usr/bin/composer self-update
 
 # Add PHP7.0 Repository
-sudo add-apt-repository ppa:ondrej/php-7.0
+sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 
 # Update Heroku Toolbelt
