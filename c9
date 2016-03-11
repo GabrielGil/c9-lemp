@@ -17,7 +17,7 @@ server {
         server_name *.c9users.io;
 
         # Home directoy, our server workspace
-        root ~/workspace;
+        root /home/ubuntu/workspace;
 
         # Look for index files in this order
         index index.html index.htm index.php;
@@ -31,11 +31,14 @@ server {
         # Only one location is needed. The root.
         location / {
             # Default: Parameters at the end for rewriting.
-            try_files $uri $uri/ /index.php?$query_string;
+            # try_files $uri $uri/ /index.php?$query_string;
 
             # Query modified for Drupal, althought should work without it.
             # this try_files (Note "q" parameter)
             # try_files $uri $uri/ /index.php?q=$uri&$args;
+
+            # Yet another default
+            try_files $uri $uri/ /index.php$is_args$args;
         }
 
         location = /favicon.ico { access_log off; log_not_found off; }
@@ -53,5 +56,7 @@ server {
             fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
             fastcgi_index index.php;
             include fastcgi_params;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_param SCRIPT_NAME $fastcgi_script_name;
         }
     }
