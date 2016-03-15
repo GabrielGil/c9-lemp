@@ -42,7 +42,7 @@ sudo service nginx stop
 # Listen port 80, change document root, setup indexes, configure PHP sock
 # set up the try_url thing (Drupal is not Worpress)...
 # Thankfully, I already modified this in the repo!
-sudo wget https://raw.githubusercontent.com/connerbw/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
+sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/c9 --output-document=/etc/nginx/sites-available/c9
 sudo chmod 755 /etc/nginx/sites-available/c9
 sudo ln -s /etc/nginx/sites-available/c9 /etc/nginx/sites-enabled/c9
 
@@ -67,7 +67,7 @@ sudo ln -sf /etc/php/7.0/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-red
 sudo ln -sf /etc/php/7.0/mods-available/redis.ini /etc/php/7.0/cli/conf.d/20-redis.ini
 
 # Install helper
-sudo wget https://raw.githubusercontent.com/connerbw/c9-lemp/master/lemp --output-document=/usr/bin/lemp
+sudo wget https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/lemp --output-document=/usr/bin/lemp
 sudo chmod 755 /usr/bin/lemp
 
 # Start the party!
