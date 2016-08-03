@@ -16,7 +16,7 @@ case "$1" in
         sleep 1
     ;;
     stop)
-        echo "Stoppting Nginx..."
+        echo "Stopping Nginx..."
         sudo service nginx stop
         sleep 1
         echo "Stopping PHP7..."
