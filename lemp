@@ -37,6 +37,6 @@ case "$1" in
         exit 0
     ;;
     *)
-        echo "Usage: `basename $0` [start|restart|stop|status|install]"
+        echo "Usage: `basename $0` [start|restart|stop|status]"
     ;;
 esac
