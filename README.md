@@ -1,7 +1,7 @@
 # c9-lemp
 
-This repo holds all the script, config files and commands you might want to
-use to set up a LEMP environment using NGINX and PHP-FPM instead the defaul
+This repo holds all the script, config files and commands that you might want to
+use to set up a LEMP environment using NGINX and PHP-FPM instead the default
 Apache2 runner for PHP applications on Cloud9 workspaces.
 
 ### Prerequisite
@@ -20,15 +20,17 @@ curl -L https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh |
 wget -O - https://raw.githubusercontent.com/GabrielGil/c9-lemp/master/install.sh | bash
 ```
 
-After completing this process your environment will be also provisioned with a
+After completing this process your environment will also be provisioned with a
 simple command to start, stop and restart the whole stack in a brief:
 
 * `lemp start` // Starts NGINX and PHP
 * `lemp stop`
+* `lemp restart`
+* `lemp status`
 
 ### Updating
 
-You can re-run this script as many times as you wish, just in case somting is updated.
+You can re-run this script as many times as you wish, just in case something is updated.
 
 
 ### Considerations
