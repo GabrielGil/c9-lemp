@@ -12,7 +12,7 @@ case "$1" in
         sudo service nginx start
         sleep 1
         echo "Starting PHP7..."
-        sudo service php7.0-fpm start
+        sudo service php7.2-fpm start
         sleep 1
     ;;
     stop)
@@ -20,7 +20,7 @@ case "$1" in
         sudo service nginx stop
         sleep 1
         echo "Stopping PHP7..."
-        sudo service php7.0-fpm stop
+        sudo service php7.2-fpm stop
         sleep 1
     ;;
     restart)
@@ -28,12 +28,12 @@ case "$1" in
         sudo service nginx restart
         sleep 1
         echo "Restarting PHP7..."
-        sudo service php7.0-fpm restart
+        sudo service php7.2-fpm restart
         sleep 1
     ;;
     status)
         sudo service nginx status
-        sudo service php7.0-fpm status
+        sudo service php7.2-fpm status
         exit 0
     ;;
     *)
